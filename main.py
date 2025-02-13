@@ -14,7 +14,7 @@ def index():
 
 @app.route('/search')
 def search():
-    model = genai.GenerativeModel('gemini-1.0-pro-latest')
+    model = genai.GenerativeModel('gemini-1.5-pro-latest')
     genai.configure(api_key=os.getenv('API'))
     context = 'Responda como se fosse um garçon de restaurante italiano'
     prompt = request.args.get('prompt')
